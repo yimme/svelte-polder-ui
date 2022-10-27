@@ -5,8 +5,6 @@
 <script lang="ts">
 	import type { Color } from '$lib/types/color';
 
-	import styles from './button.module.scss';
-
 	export let variant: ButtonVariant;
 	export let color: Color;
 </script>
