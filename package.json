@@ -1,0 +1,19 @@
+{
+  "name": "svelte-polder-ui",
+  "version": "1.0.0",
+  "description": "Component Library for Svelte",
+  "private": true,
+  "scripts": {},
+  "keywords": [
+    "svelte",
+    "component library",
+    "ui library",
+    "svelte kit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yimme/svelte-polder-ui"
+  },
+  "author": "Jimme",
+  "license": "MIT"
+}
