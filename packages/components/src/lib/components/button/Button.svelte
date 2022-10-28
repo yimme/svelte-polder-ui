@@ -12,3 +12,11 @@
 <button class="button" class:variant class:color>
 	<slot />
 </button>
+
+<style lang="scss">
+	.button {
+		background: transparent;
+		border: 0;
+		font: inherit;
+	}
+</style>
