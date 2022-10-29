@@ -73,13 +73,17 @@
 			--btn-color-text: var(--color-neutral-800);
 		}
 
+		&.disabled,
 		&:disabled {
-			background-color: var(--color-neutral-300);
-			color: var(--color-neutral-600);
+			--btn-color-background: var(--color-neutral-300);
+			--btn-color-text: var(--color-neutral-600);
+			--btn-color-border: var(--color-neutral-600);
 			cursor: default;
 		}
 
-		@include states.highlightable();
+		&:not(:disabled, .disabled) {
+			@include states.highlightable();
+		}
 
 		&.ghost {
 			background-color: transparent;
@@ -92,8 +96,6 @@
 
 			&:disabled {
 				background-color: inherit;
-				border-color: var(--color-neutral-600);
-				color: var(--color-neutral-600);
 			}
 		}
 	}
