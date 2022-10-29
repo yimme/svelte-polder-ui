@@ -1,0 +1,7 @@
+@mixin highlightable() {
+	&:active,
+	&:focus,
+	&:hover {
+		outline: 4px solid var(--color-highlight, var(--color-primary-100));
+	}
+}
