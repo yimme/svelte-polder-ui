@@ -37,6 +37,6 @@
 	<Button {...args}>Button</Button>
 </Template>
 
-<Story name="Default" args={{ disabled: false, color: 'primary' }} />
+<Story name="Default" args={{ disabled: false, color: 'primary', variant: 'default' }} />
 
 <Story name="Ghost" args={{ variant: 'ghost', color: 'primary', disabled: false }} />
