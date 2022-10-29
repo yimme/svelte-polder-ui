@@ -4,7 +4,7 @@
   "description": "Component Library for Svelte",
   "private": true,
   "scripts": {
-    "components:storybook": "pnpm -F @polderui/components run storybook"
+    "components:storybook": "pnpm -F @polder/components run storybook"
   },
   "keywords": [
     "svelte",

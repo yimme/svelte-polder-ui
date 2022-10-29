@@ -1,5 +1,5 @@
 {
-	"name": "@polderui/components",
+	"name": "@polder/components",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
