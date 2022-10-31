@@ -1,5 +1,5 @@
 @mixin highlightable() {
-	outline: 4px solid rgba(255, 255, 255, 0);
+	outline: 4px solid rgb(255 255 255 / 0%);
 	transition: outline 128ms ease-in-out;
 
 	&:active,
