@@ -3,8 +3,6 @@
 @use './variables/spacing';
 @use './variables/typography.module';
 
-@use './fonts';
-
 :root {
 	--color-primary-100: #{color.$color-primary-100};
 	--color-primary-200: #{color.$color-primary-200};
