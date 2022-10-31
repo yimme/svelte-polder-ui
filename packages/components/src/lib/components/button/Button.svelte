@@ -1,12 +1,12 @@
 <script lang="ts" context="module">
-	export type ButtonVariant = 'default' | 'ghost';
+	export type ButtonVariant = 'ghost' | undefined;
 </script>
 
 <script lang="ts">
 	import type { Color } from '$lib/types/color';
 
 	export let variant: ButtonVariant;
-	export let color: Color;
+	export let color: Color = 'primary';
 
 	let classList = ['button', variant, color].filter(Boolean).join(' ');
 </script>
