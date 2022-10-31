@@ -1,10 +1,16 @@
+# Polder
+
+A Svelte component library in progress.
+
 ## Installation
 
 ```sh
-npm install @polder/components
+npm install polder
 ```
 
 ### Add fonts
+
+Add Noto Sans fonts to your `head`.
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com" />
