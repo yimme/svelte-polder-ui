@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import type { Color } from '$lib/types/color';
+	import type { Color } from '../../types/color';
 
 	export let variant: ButtonVariant;
 	export let color: Color = 'primary';

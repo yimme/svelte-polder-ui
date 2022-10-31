@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
+import mm from 'micromatch';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,6 +10,12 @@ const config = {
 
 	kit: {
 		adapter: adapter()
+	},
+	package: {
+		exports: (filepath) => {
+			if (filepath.endsWith('.d.ts')) return false;
+		},
+		files: mm.matcher('!**/*.stories.svelte')
 	}
 };
 
