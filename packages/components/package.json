@@ -60,5 +60,6 @@
 	"files": [
 		"*"
 	],
-	"svelte": "index.js"
+	"svelte": "index.js",
+	"main": "package/index.js"
 }

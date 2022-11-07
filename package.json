@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "lib:storybook": "pnpm -F polder run storybook",
-    "lib:build": "pnpm -F polder run build"
+    "lib:build": "pnpm -F polder run build",
+    "docs:dev": "pnpm -F @polder/docs run dev"
   },
   "keywords": [
     "svelte",
