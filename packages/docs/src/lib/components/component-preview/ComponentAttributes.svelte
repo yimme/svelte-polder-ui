@@ -6,6 +6,7 @@
 		control: ComponentAttributeControl;
 		options?: string[];
 		value: string | boolean | undefined;
+		type: string;
 	};
 </script>
 

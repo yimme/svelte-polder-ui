@@ -19,18 +19,21 @@
 		{
 			name: 'color',
 			control: 'color',
-			value: 'primary'
+			value: 'primary',
+			type: 'string'
 		},
 		{
 			name: 'variant',
 			control: 'select',
 			options: ['default', 'ghost'],
-			value: 'default'
+			value: 'default',
+			type: 'string'
 		},
 		{
 			name: 'disabled',
 			control: 'checkbox',
-			value: false
+			value: false,
+			type: 'boolean'
 		}
 	];
 
@@ -93,92 +96,34 @@
 	<div class="table-of-props">
 		<table class="table">
 			<tr>
-				<th>prop names</th>
-				<th>prop type</th>
-				<th>options</th>
-				<th>default value</th>
+				<th>Name</th>
+				<th>Type</th>
+				<th>Options</th>
+				<th>Default value</th>
 			</tr>
-			<tr>
-				<td>Disabled</td>
-				<td>Boolean</td>
-				<td>-</td>
-				<td>null</td>
-			</tr>
-			<tr>
-				<td>Variant</td>
-				<td>String</td>
-				<td>
-					<ul>
-						<li>ghost</li>
-						<li>default</li>
-					</ul>
-				</td>
-				<td>default</td>
-			</tr>
-			<tr>
-				<td>color</td>
-				<td>string</td>
-				<td>
-					<ul>
-						<li>primary</li>
-						<li>info</li>
-						<li>success</li>
-						<li>warning</li>
-						<li>danger</li>
-						<li>neutral</li>
-					</ul>
-				</td>
-				<td>primary</td>
-			</tr>
+			{#each attributes as attribute}
+				<tr>
+					<td>{attribute.name}</td>
+					<td>{attribute.type}</td>
+					<td>
+						{#if !attribute.options}
+							-
+						{:else}
+							<ul>
+								{#each attribute.options as option}
+									<li>{option}</li>
+								{/each}
+							</ul>
+						{/if}
+					</td>
+					<td>{attribute.value}</td>
+				</tr>
+			{/each}
 		</table>
 	</div>
 </div>
 
 <style lang="scss">
-	.component-preview {
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		border: 1px solid var(--color-neutral-400);
-		border-radius: 4px;
-		overflow: hidden;
-
-		&__canvas {
-			width: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 64px;
-			background: var(--color-neutral-300);
-			background-color: #eeeeee;
-			background-image: repeating-linear-gradient(
-					45deg,
-					#fff 25%,
-					transparent 25%,
-					transparent 75%,
-					#fff 75%,
-					#fff
-				),
-				repeating-linear-gradient(45deg, #ffffff 25%, #eeeeee 25%, #eeeeee 75%, #fff 75%, #fff);
-			background-position: 0 0, 10px 10px;
-			background-size: 20px 20px;
-			border-right: 1px solid var(--color-neutral-400);
-		}
-
-		&__attributes {
-			min-width: 25%;
-			box-sizing: border-box;
-			font-size: var(--font-size-body-small);
-
-			h2 {
-				font-size: var(--font-size-heading-4);
-				line-height: var(--font-size-heading-4);
-				padding-left: var(--space-3);
-				margin-bottom: var(--space-2);
-			}
-		}
-	}
-
 	.definition-list {
 		display: flex;
 		flex-direction: column;
@@ -205,37 +150,6 @@
 			&:last-child {
 				border-bottom: 0;
 			}
-		}
-	}
-
-	.swatches {
-		display: flex;
-		gap: 0.25rem;
-		flex-wrap: wrap;
-	}
-
-	.swatch {
-		cursor: pointer;
-		border: 0;
-		border-radius: var(--radius-1);
-		min-height: var(--line-height-body-extra-small);
-		min-width: calc(var(--line-height-body-extra-small) * 1.6);
-		border: 1px solid;
-	}
-
-	.prop {
-		display: flex;
-		flex-direction: column;
-		border-bottom: 1px solid var(--color-neutral-400);
-		padding: var(--space-3);
-
-		&:last-child {
-			border-bottom: 0;
-		}
-
-		&__name {
-			font-weight: 500;
-			line-height: var(--line-height-body);
 		}
 	}
 
