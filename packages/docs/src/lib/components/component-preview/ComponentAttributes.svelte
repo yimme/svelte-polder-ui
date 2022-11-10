@@ -18,23 +18,30 @@
 <div class="component-attributes">
 	<h2>Props</h2>
 	{#each attributes as attribute}
-		{attribute.value}
 		<div class="component-attributes__item">
-			<span class="component-attributes__title">{attribute.control}</span>
+			<span class="component-attributes__title">{attribute.name}</span>
 
 			{#if attribute.control === 'color' && typeof attribute.value === 'string'}
 				<ColorProp bind:value={attribute.value} />
 			{/if}
 
 			{#if attribute.control === 'select'}
-				{#if attribute.options}
-					{#each attribute.options as option}
-						<input type="radio" /> {option}
-					{/each}
-				{/if}
+				<div class="select-list">
+					{#if attribute.options}
+						{#each attribute.options as option}
+							<label>
+								<input bind:group={attribute.value} type="radio" value={option} />
+								{option}
+							</label>
+						{/each}
+					{/if}
+				</div>
 			{/if}
-			{#if attribute.control === 'checkbox'}
-				<input type="checkbox" />
+			{#if attribute.control === 'checkbox' && typeof attribute.value === 'boolean'}
+				<label>
+					<input type="checkbox" bind:checked={attribute.value} />
+					{attribute.name}
+				</label>
 			{/if}
 		</div>
 	{/each}
@@ -67,6 +74,16 @@
 			&:last-child {
 				border-bottom: none;
 			}
+		}
+	}
+
+	.select-list {
+		display: flex;
+		flex-direction: column;
+
+		label {
+			line-height: var(--line-height-body);
+			cursor: pointer;
 		}
 	}
 </style>

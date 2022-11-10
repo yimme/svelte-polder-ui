@@ -8,25 +8,10 @@
 	import githubdd from 'svelte-highlight/styles/github-dark-dimmed';
 	import ComponentPreview from '$lib/components/ComponentPreview.svelte';
 	import type { ComponentAttribute } from '$lib/components/component-preview/ComponentAttributes.svelte';
-	// import { onMount } from 'svelte';
 
-	// onMount(() => {
-	// 	const x = document.getElementById('canva');
-	// 	if (!x) return;
-	// 	const comp = new Button({ target: x });
-	// 	console.log(comp.$$.props);
-
-	// 	const k = Object.keys(comp.$$.props);
-	// 	const y = comp.$$.props;
-	// 	console.log(y);
-	// });
-
-	let text: String = 'Button';
 	let variant: ButtonVariant = undefined;
 	let color: Color = 'primary';
 	let disabled: Boolean = false;
-
-	let colors: Color[] = ['danger', 'info', 'neutral', 'primary', 'success', 'warning'];
 
 	let code_sample: String;
 
@@ -39,18 +24,26 @@
 		{
 			name: 'variant',
 			control: 'select',
-			options: ['ghost', 'default'],
+			options: ['default', 'ghost'],
 			value: 'default'
 		},
 		{
 			name: 'disabled',
 			control: 'checkbox',
-			value: undefined
+			value: false
 		}
 	];
 
+	const getAttribute = (list: ComponentAttribute[], name: string): ComponentAttribute | null => {
+		const attribute = list.find((attr) => attr.name === name);
+		if (!attribute) return null;
+		return attribute;
+	};
+
 	$: code_sample = `
-<Button variant="${variant}" color="${color}">
+<Button variant="${getAttribute(attributes, 'variant')?.value}" color="${
+		getAttribute(attributes, 'color')?.value
+	}">
 	Button
 </Button>
 	`;
@@ -87,52 +80,11 @@
 		<ComponentPreview component={Button} content="Button" {attributes} />
 	{/key}
 	<h2>Component Preview</h2>
-	<div class="component-preview">
-		<div class="component-preview__canvas">
-			{#key [variant, color, disabled]}
-				<Button {variant} {color} {disabled}>{text}</Button>
-			{/key}
-		</div>
-		<div class="component-preview__attributes">
-			<h2>Props</h2>
-			<div class="prop">
-				<span class="prop__name">Color</span>
-				<div class="swatches">
-					{#each colors as c}
-						<button
-							on:click={() => (color = c)}
-							style={`background-color: var(--color-${c}-300); border-color: var(--color-${c}-500)`}
-							class={['swatch'].filter(Boolean).toString()}
-						/>
-					{/each}
-				</div>
-			</div>
-
-			<div class="prop">
-				<span class="prop__name">Variant</span>
-				<label>
-					<input type="radio" name="variant" value="default" bind:group={variant} />
-					Default
-				</label>
-				<label>
-					<input type="radio" name="variant" value="ghost" bind:group={variant} />
-					Ghost
-				</label>
-			</div>
-
-			<div class="prop">
-				<label>
-					<input type="checkbox" name="variant" bind:value={disabled} />
-					Disabled
-				</label>
-			</div>
-		</div>
-	</div>
 
 	<h2>Source code</h2>
 
 	<div class="source-code">
-		{#key [variant, color, disabled]}
+		{#key [attributes]}
 			<Highlight language={typescript} code={code_sample} />
 		{/key}
 	</div>
