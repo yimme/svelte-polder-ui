@@ -16,7 +16,7 @@
 </script>
 
 <div class="component-attributes">
-	<h2>Props</h2>
+	<h2>Component Props</h2>
 	{#each attributes as attribute}
 		<div class="component-attributes__item">
 			<span class="component-attributes__title">{attribute.name}</span>

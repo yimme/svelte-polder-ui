@@ -31,6 +31,7 @@
 
 	.content {
 		grid-area: body;
-		padding: 1rem;
+		padding: var(--space-5) var(--space-7);
+		width: 100%;
 	}
 </style>

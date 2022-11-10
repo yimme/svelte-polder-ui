@@ -23,8 +23,6 @@
 	getProps();
 </script>
 
-{props[0]}
-
 <div class="component-preview">
 	<div class="component-preview__canvas">
 		{#key [props, attributes]}

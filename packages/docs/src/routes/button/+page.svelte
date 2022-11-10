@@ -75,13 +75,12 @@
 		</dd>
 	</dl>
 
-	<h2>Component Preview Beta</h2>
+	<h2>Component Preview</h2>
 	{#key attributes}
 		<ComponentPreview component={Button} content="Button" {attributes} />
 	{/key}
-	<h2>Component Preview</h2>
 
-	<h2>Source code</h2>
+	<h2>Code example</h2>
 
 	<div class="source-code">
 		{#key [attributes]}
@@ -290,7 +289,7 @@
 		}
 		tr {
 			&:hover {
-				background: var(--color-primary-100);
+				background: var(--color-neutral-200);
 			}
 		}
 	}
