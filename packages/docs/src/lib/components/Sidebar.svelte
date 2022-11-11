@@ -15,10 +15,15 @@
 				{
 					label: 'Buttons',
 					href: '/button'
-				},
+				}
+			]
+		},
+		{
+			title: 'Theming',
+			items: [
 				{
-					label: 'Buttons',
-					href: '/button'
+					label: 'sass',
+					href: '/sass'
 				}
 			]
 		}
