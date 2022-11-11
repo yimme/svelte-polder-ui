@@ -1,17 +1,10 @@
-<svelte:options accessors />
-
 <script lang="ts">
-	import Button, { type ButtonVariant } from 'polder/src/lib/components/button/Button.svelte';
-	import type { Color } from '../../../../components/src/lib/types/color';
+	import Button from 'polder/src/lib/components/button/Button.svelte';
 	import Highlight from 'svelte-highlight';
 	import typescript from 'svelte-highlight/languages/typescript';
 	import githubdd from 'svelte-highlight/styles/github-dark-dimmed';
 	import ComponentPreview from '$lib/components/ComponentPreview.svelte';
 	import type { ComponentAttribute } from '$lib/components/component-preview/ComponentAttributes.svelte';
-
-	let variant: ButtonVariant = undefined;
-	let color: Color = 'primary';
-	let disabled: Boolean = false;
 
 	let code_sample: String;
 

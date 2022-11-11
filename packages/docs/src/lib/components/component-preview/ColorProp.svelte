@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Color } from '../../../../../components/src/lib/types/color';
-	import ComponentAttributes from './ComponentAttributes.svelte';
 
 	export let value: String;
 

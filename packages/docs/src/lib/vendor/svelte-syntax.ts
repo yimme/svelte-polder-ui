@@ -1,6 +1,6 @@
-module.exports = {
+export default {
 	name: 'svelte',
-	register: (hljs) => {
+	register: (hljs: any) => {
 		return {
 			subLanguage: 'xml',
 			contains: [
@@ -25,9 +25,9 @@ module.exports = {
 					end: /\}/gm,
 					subLanguage: 'javascript',
 					contains: [
-						{ begin: /[\{]/, end: /[\}]/, skip: !0 },
+						{ begin: /[{]/, end: /[}]/, skip: !0 },
 						{
-							begin: /([#:\/@])(if|else|each|await|then|catch|debug|html)/gm,
+							begin: /([#:/@])(if|else|each|await|then|catch|debug|html)/gm,
 							className: 'keyword',
 							relevance: 10
 						}
