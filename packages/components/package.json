@@ -1,6 +1,6 @@
 {
 	"name": "polder",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"keywords": [
 		"svelte",
 		"component library",
@@ -60,6 +60,9 @@
 	"files": [
 		"*"
 	],
+	"exports": {
+		"./theme/index.scss": "./theme/index.scss"
+	},
 	"svelte": "index.js",
 	"main": "package/index.js"
 }
