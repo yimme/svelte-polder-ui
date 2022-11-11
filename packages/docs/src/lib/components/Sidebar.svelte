@@ -2,12 +2,7 @@
 	let menu = [
 		{
 			title: 'Getting Started',
-			items: [
-				{
-					label: 'Installation',
-					href: '/getting-started'
-				}
-			]
+			items: []
 		},
 		{
 			title: 'Basic Components',
@@ -20,12 +15,7 @@
 		},
 		{
 			title: 'Theming',
-			items: [
-				{
-					label: 'sass',
-					href: '/sass'
-				}
-			]
+			items: []
 		}
 	];
 </script>
