@@ -17,6 +17,7 @@
 		"highlight.js": "^11.6.0",
 		"highlightjs-svelte": "^1.0.6",
 		"polder": "^0.0.3",
+		"sass": "^1.55.0",
 		"svelte-highlight": "^6.2.1"
 	},
 	"devDependencies": {
