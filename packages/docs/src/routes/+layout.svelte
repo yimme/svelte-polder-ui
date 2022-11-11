@@ -1,5 +1,5 @@
 <script lang="ts">
-	import 'polder/src/lib/theme/index.scss';
+	import 'polder/theme/index.scss';
 	import '$lib/style/index.scss';
 	import Header from '../lib/components/Header.svelte';
 	import Sidebar from '../lib/components/Sidebar.svelte';
