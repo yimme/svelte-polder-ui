@@ -1,0 +1,10 @@
+@mixin highlightable() {
+	outline: 4px solid rgb(255 255 255 / 0%);
+	transition: outline 128ms ease-in-out;
+
+	&:active,
+	&:focus,
+	&:hover {
+		outline: 4px solid var(--color-highlight, var(--color-primary-100));
+	}
+}

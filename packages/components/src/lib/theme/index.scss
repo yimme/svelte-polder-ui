@@ -1,0 +1,74 @@
+@use './variables/color.module';
+@use './variables/radii';
+@use './variables/spacing';
+@use './variables/typography.module';
+
+:root {
+	--color-primary-100: #{color.$color-primary-100};
+	--color-primary-200: #{color.$color-primary-200};
+	--color-primary-300: #{color.$color-primary-300};
+	--color-primary-400: #{color.$color-primary-400};
+	--color-primary-500: #{color.$color-primary-500};
+	--color-info-100: #{color.$color-info-100};
+	--color-info-200: #{color.$color-info-200};
+	--color-info-300: #{color.$color-info-300};
+	--color-info-400: #{color.$color-info-400};
+	--color-info-500: #{color.$color-info-500};
+	--color-success-100: #{color.$color-success-100};
+	--color-success-200: #{color.$color-success-200};
+	--color-success-300: #{color.$color-success-300};
+	--color-success-400: #{color.$color-success-400};
+	--color-success-500: #{color.$color-success-500};
+	--color-warning-100: #{color.$color-warning-100};
+	--color-warning-200: #{color.$color-warning-200};
+	--color-warning-300: #{color.$color-warning-300};
+	--color-warning-400: #{color.$color-warning-400};
+	--color-warning-500: #{color.$color-warning-500};
+	--color-danger-100: #{color.$color-danger-100};
+	--color-danger-200: #{color.$color-danger-200};
+	--color-danger-300: #{color.$color-danger-300};
+	--color-danger-400: #{color.$color-danger-400};
+	--color-danger-500: #{color.$color-danger-500};
+	--color-neutral-100: #{color.$color-neutral-100};
+	--color-neutral-200: #{color.$color-neutral-200};
+	--color-neutral-300: #{color.$color-neutral-300};
+	--color-neutral-400: #{color.$color-neutral-400};
+	--color-neutral-500: #{color.$color-neutral-500};
+	--color-neutral-600: #{color.$color-neutral-600};
+	--color-neutral-700: #{color.$color-neutral-700};
+	--color-neutral-800: #{color.$color-neutral-800};
+	--color-neutral-900: #{color.$color-neutral-900};
+	--color-neutral-1000: #{color.$color-neutral-1000};
+	--space-1: #{spacing.$space-1};
+	--space-2: #{spacing.$space-2};
+	--space-3: #{spacing.$space-3};
+	--space-4: #{spacing.$space-4};
+	--space-5: #{spacing.$space-5};
+	--space-6: #{spacing.$space-6};
+	--space-7: #{spacing.$space-7};
+	--radius-1: #{radii.$radius-1};
+	--radius-2: #{radii.$radius-2};
+	--radius-3: #{radii.$radius-3};
+	--font-size-heading-1: #{typography.$font-size-heading-1};
+	--font-size-heading-2: #{typography.$font-size-heading-2};
+	--font-size-heading-3: #{typography.$font-size-heading-3};
+	--font-size-heading-4: #{typography.$font-size-heading-4};
+	--line-height-heading-1: #{typography.$line-height-heading-1};
+	--line-height-heading-2: #{typography.$line-height-heading-2};
+	--line-height-heading-3: #{typography.$line-height-heading-3};
+	--line-height-heading-4: #{typography.$line-height-heading-4};
+	--font-size-body: #{typography.$font-size-body};
+	--font-size-body-small: #{typography.$font-size-body-small};
+	--font-size-body-extra-small: #{typography.$font-size-body-extra-small};
+	--font-size-body-large: #{typography.$font-size-body-large};
+	--line-height-body: #{typography.$line-height-body};
+	--line-height-body-small: #{typography.$line-height-body-small};
+	--line-height-body-extra-small: #{typography.$line-height-body-extra-small};
+	--line-height-body-large: #{typography.$line-height-body-large};
+	--font-family-body: #{typography.$font-family-body};
+}
+
+html,
+body {
+	font-family: typography.$font-family-body;
+}
