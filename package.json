@@ -6,7 +6,10 @@
   "scripts": {
     "lib:storybook": "pnpm -F polder run storybook",
     "lib:build": "pnpm -F polder run build",
-    "docs:dev": "pnpm -F @polder/docs run dev"
+    "lib:prepare": "pnpm -F polder run prepare",
+    "docs:dev": "pnpm -F @polder/docs run dev",
+    "docs:build": "pnpm -F @polder/docs run build",
+    "build": "pnpm run lib:check && pnpm run docs:build"
   },
   "keywords": [
     "svelte",
