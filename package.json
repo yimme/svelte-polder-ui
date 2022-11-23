@@ -8,8 +8,7 @@
     "lib:build": "pnpm -F polder run build",
     "lib:check": "pnpm -F polder run check",
     "docs:dev": "pnpm -F @polder/docs run dev",
-    "docs:build": "pnpm -F @polder/docs run build",
-    "build": "pnpm run lib:build && pnpm run docs:build"
+    "docs:build": "pnpm -F @polder/docs run build"
   },
   "keywords": [
     "svelte",
