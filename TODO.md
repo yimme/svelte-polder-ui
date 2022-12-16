@@ -7,7 +7,7 @@
 | Alerts                 | [x]    | [ ]  |
 | Avatars                | [ ]    | [ ]  |
 | Badges                 | [ ]    | [ ]  |
-| Buttons                | [ ]    | [ ]  |
+| Buttons                | [x]    | [ ]  |
 | Cards                  | [ ]    | [ ]  |
 | Date picker            | [ ]    | [ ]  |
 | Dialogs                | [ ]    | [ ]  |
