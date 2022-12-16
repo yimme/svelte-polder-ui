@@ -6,7 +6,7 @@
 | ---------------------- | ------ | ---- |
 | Alerts                 | [x]    | [ ]  |
 | Avatars                | [ ]    | [ ]  |
-| Badges                 | [ ]    | [ ]  |
+| Badges                 | [x]    | [ ]  |
 | Buttons                | [x]    | [ ]  |
 | Cards                  | [ ]    | [ ]  |
 | Date picker            | [ ]    | [ ]  |
