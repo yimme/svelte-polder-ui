@@ -1,0 +1,25 @@
+# TODO
+
+## Components
+
+| Component              | Svelte | Docs |
+| ---------------------- | ------ | ---- |
+| Alerts                 | [x]    | [ ]  |
+| Avatars                | [ ]    | [ ]  |
+| Badges                 | [ ]    | [ ]  |
+| Buttons                | [ ]    | [ ]  |
+| Cards                  | [ ]    | [ ]  |
+| Date picker            | [ ]    | [ ]  |
+| Dialogs                | [ ]    | [ ]  |
+| Dividers               | [ ]    | [ ]  |
+| Form Inputs & Controls | [ ]    | [ ]  |
+| List                   | [ ]    | [ ]  |
+| Loaders                | [ ]    | [ ]  |
+| Menu                   | [ ]    | [ ]  |
+| Navigation             | [ ]    | [ ]  |
+| Pills                  | [ ]    | [ ]  |
+| Progress Bar           | [ ]    | [ ]  |
+| Spinners               | [ ]    | [ ]  |
+| Tables                 | [ ]    | [ ]  |
+| Toast                  | [ ]    | [ ]  |
+| Tooltips               | [ ]    | [ ]  |
