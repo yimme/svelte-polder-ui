@@ -61,5 +61,8 @@
 		"*"
 	],
 	"svelte": "index.js",
-	"main": "package/index.js"
+	"main": "package/index.js",
+	"dependencies": {
+		"storybook-dark-mode": "^2.0.5"
+	}
 }
