@@ -39,6 +39,12 @@
 	--color-neutral-800: #{color.$color-neutral-800};
 	--color-neutral-900: #{color.$color-neutral-900};
 	--color-neutral-1000: #{color.$color-neutral-1000};
+	--color-typography-heading: #{color.$color-neutral-1000};
+	--color-typography-placeholder: #{color.$color-neutral-800};
+	--color-typography-link: #{color.$color-primary-300};
+	--color-typography-disabled: #{color.$color-neutral-600};
+	--color-typopgraphy-body: #{color.$color-typography-body};
+	--color-typography-secondary: #{color.$color-typography-secondary};
 	--space-1: #{spacing.$space-1};
 	--space-2: #{spacing.$space-2};
 	--space-3: #{spacing.$space-3};
@@ -70,5 +76,6 @@
 
 html,
 body {
-	font-family: typography.$font-family-body;
+	font-family: var(--font-family-body);
+	color: var(--color-typopgraphy-body);
 }
